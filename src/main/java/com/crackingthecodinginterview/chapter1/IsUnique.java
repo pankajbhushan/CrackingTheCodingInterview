@@ -8,7 +8,7 @@ import java.util.Scanner;
  * What if you cannot use additional data structures.
  * 
  * */
-public class Question1 {
+public class IsUnique {
 
 	private static Scanner in = new Scanner(System.in);
 	
