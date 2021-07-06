@@ -15,22 +15,33 @@ public class RemoveDups {
 
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		Node head = new Node();
-		Node curr = new Node();
+		Node head = null;
+		Node curr = null;
 		String[] values = br.readLine().split(" ");
-		head.value = Integer.valueOf(values[0]);
+		head = new Node(Integer.valueOf(values[0]));
 		head.next = curr;
 
 		for (int i = 1; i < values.length; i++) {
-			curr.value = Integer.valueOf(values[i]);
-			curr.next = new Node();
+			curr = new Node(Integer.valueOf(values[i]));
 			curr = curr.next;
 		}
 		
+		removeDups(head);
 		printList(head);
 		System.out.println("Head points to: " + head.value);
 	}
 	
+	private static void removeDups(Node head) {
+		Node curr = head;
+		Node next = curr.next;
+		while(null != next) {
+			if(curr.value > next.value) {
+				//TODO Implement sorting logic here
+			}
+		}
+		
+	}
+
 	private static void printList(Node node) {
 		while(node.next != null) {
 			System.out.println(node.value);
@@ -43,4 +54,8 @@ public class RemoveDups {
 class Node{
 	int value;
 	Node next;
+	
+	public Node(int value) {
+		this.value = value;
+	}
 }
