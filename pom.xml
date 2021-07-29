@@ -37,6 +37,22 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-jar-plugin</artifactId>
+			    <configuration>
+			        <archive>
+			            <manifest>
+			                <packageName>com.crackingthecodinginterview</packageName>
+			            </manifest>
+			            <manifestEntries>
+			            	<title>CTCI</title>
+			            	<version>1.0.0</version>
+			                <Created-By>Pankaj Bhushan</Created-By>
+			            </manifestEntries>
+			        </archive>
+			    </configuration>
+			</plugin>
 		</plugins>
 	</build>
 

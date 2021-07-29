@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
@@ -29,3 +30,9 @@ build/
 
 ### VS Code ###
 .vscode/
+=======
+target
+.settings/
+.project
+.classpath
+>>>>>>> e55d3e7a8a81b4d4467e5a8525d3f8063433d884
